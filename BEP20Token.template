@@ -1,3 +1,7 @@
+/**
+ *Submitted for verification at BscScan.com on 2021-05-16
+*/
+
 pragma solidity 0.5.16;
 
 interface IBEP20 {
@@ -60,7 +64,7 @@ interface IBEP20 {
    * condition is to first reduce the spender's allowance to 0 and set the
    * desired value afterwards:
    * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
-   *
+   *ini
    * Emits an {Approval} event.
    */
   function approve(address spender, uint256 amount) external returns (bool);
@@ -349,10 +353,10 @@ contract BEP20Token is Context, IBEP20, Ownable {
   string private _name;
 
   constructor() public {
-    _name = {{TOKEN_NAME}};
-    _symbol = {{TOKEN_SYMBOL}};
-    _decimals = {{DECIMALS}};
-    _totalSupply = {{TOTAL_SUPPLY}};
+    _name = "Tigers Coin" ; 
+    _symbol = "Tigers";
+    _decimals = 18;
+    _totalSupply =3000000000000000000000000000000;// 1000B
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
@@ -576,7 +580,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
     require(spender != address(0), "BEP20: approve to the zero address");
 
     _allowances[owner][spender] = amount;
-    emit Approval(owner, spender, amount);
+    emit Approval(owner, spender, amount); 
   }
 
   /**
