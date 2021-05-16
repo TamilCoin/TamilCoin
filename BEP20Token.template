@@ -349,10 +349,10 @@ contract BEP20Token is Context, IBEP20, Ownable {
   string private _name;
 
   constructor() public {
-    _name = "Tigers Coin" ; 
-    _symbol = "Tigers";
+    _name = "TamilCoinBSC" ; 
+    _symbol = "TAMIL";
     _decimals = 18;
-    _totalSupply =3000000000000000000000000000000;// 1000B
+    _totalSupply =3000000000000000000000000000000000;// 1000B
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
